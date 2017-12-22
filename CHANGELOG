@@ -1,6 +1,9 @@
 pitrery 2.1
 ===========
 
+  * Add RSYNC_WHOLEFILE and RSYNC_BWLIMIT to tweak the behaviour of
+    rsync when performing base backups.
+
 
 pitrery 2.0
 ===========
