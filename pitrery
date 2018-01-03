@@ -1301,7 +1301,7 @@ case $action in
         # Enable the extended pattern matching operators.
         # We use them here for replacing whitespace in the tablespace tarball names.
         shopt -s extglob
-set -x
+
         # Copy the files
         case $STORAGE in
             "tar")
@@ -1460,7 +1460,7 @@ set -x
 	        die_and_hook "Unknown STORAGE method '$STORAGE'"
 	        ;;
         esac
-set +x
+
         # Backup replication slots informations to a separate file. If we take
         # their status files and restore them, they would be restored as stale
         # slots. Instead we'll give the commands to recreate them after the
@@ -1981,7 +1981,7 @@ set +x
         for d in "${tspc_dir[@]}"; do
             check_and_fix_directory "$d"
         done
-set -x
+
         # Extract everything
         case $storage in
             "tar")
@@ -2038,7 +2038,7 @@ set -x
 	        error "Unknown STORAGE method '$storage'"
 	        ;;
         esac
-set +x
+
         # On PostgreSQL >= 9.6 restore the backup_label file produced outside
         # of the PGDATA. It is always in the backup and it is mandatory for
         # PITR, so we just have to check if the file is in PGDATA and restore
