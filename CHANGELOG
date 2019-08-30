@@ -1,3 +1,11 @@
+pitrey 2.3.1
+============
+
+  * New maintainer: Thibaut Madelaine.
+
+  * Warn about untested version on restore.
+
+
 pitrery 2.3
 ===========
 
